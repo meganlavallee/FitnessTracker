@@ -1,5 +1,5 @@
 // Connect with Config Folder
-const connection = require("../config/connection.js");
+const connection = require("./config/connection.js");
 
 // All functions
 const workout = {
