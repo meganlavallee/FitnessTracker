@@ -12,11 +12,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Bicep Curl",
+        name: "placeholder",
         duration: 20,
-        weight: 100,
-        reps: 10,
-        sets: 4
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -25,11 +25,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Lateral Pull",
+        name: "placeholder",
         duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -38,11 +38,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Push Press",
-        duration: 25,
-        weight: 185,
-        reps: 8,
-        sets: 4
+        name: "placeholder",
+        duration: 20,
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -51,9 +51,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "cardio",
-        name: "Running",
-        duration: 25,
-        distance: 4
+        name: "placeholder",
+        duration: 20,
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -62,11 +64,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Bench Press",
+        name: "placeholder",
         duration: 20,
-        weight: 285,
-        reps: 10,
-        sets: 4
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -75,11 +77,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Bench Press",
+        name: "placeholder",
         duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -88,11 +90,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Quad Press",
-        duration: 30,
-        weight: 300,
-        reps: 10,
-        sets: 4
+        name: "placeholder",
+        duration: 20,
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -101,11 +103,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Bench Press",
+        name: "placeholder",
         duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   },
@@ -114,11 +116,24 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Military Press",
+        name: "placeholder",
         duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4
+        distance: 100,
+        stroke: 10,
+        technique: 4
+      }
+    ]
+  },
+  {
+    day: new Date(new Date().setDate(new Date().getDate() - 1)),
+    exercises: [
+      {
+        type: "resistance",
+        name: "placeholder",
+        duration: 20,
+        distance: 100,
+        stroke: 10,
+        technique: 4
       }
     ]
   }

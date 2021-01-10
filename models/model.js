@@ -30,11 +30,6 @@ const workouts = new Schema({
             trim: true,
 
         },
-        duration: {
-            type: Number,
-            trim: true,
-
-        },
         stroke: {
             type: Number,
             trim: true,
