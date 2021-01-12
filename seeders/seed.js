@@ -12,11 +12,22 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        name: "Low Intensiry Resistance Set",
+        reps: 3,
+        distance: 25,
+        duration: 40,
+        stroke: freestyle,
+        technique: buckets,
+
+        reps: 1,
+        distance: 75,
+        duration: 230,
+        stroke: freestyle,
+        technique: buckets,
+
+        reps: 1,
+        distance: 50,
+        stroke: freestyle,
       }
     ]
   },
@@ -24,12 +35,12 @@ const workoutSeed = [
     day: new Date().setDate(new Date().getDate()-9),
     exercises: [
       {
-        type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        type: "strength",
+        name: "strength swim",
+        reps: 4,
+        distance: 50,
+        stroke: all,
+        technique: form,
       }
     ]
   },
@@ -37,12 +48,10 @@ const workoutSeed = [
     day: new Date().setDate(new Date().getDate()-8),
     exercises: [
       {
-        type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        type: "cardio",
+        name: "seal jacks",
+        reps: 30,
+        pace: focused,
       }
     ]
   },
@@ -51,11 +60,9 @@ const workoutSeed = [
     exercises: [
       {
         type: "cardio",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        name: "kettlebell",
+        reps: 5,
+        technique: form,
       }
     ]
   },
@@ -64,11 +71,12 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        name: "kickboard time",
+        duration: lap,
+        distance: 50,
+        stroke: kick,
+        technique: 4,
+        pace: fast,
       }
     ]
   },
@@ -76,12 +84,12 @@ const workoutSeed = [
     day: new Date().setDate(new Date().getDate()-5),
     exercises: [
       {
-        type: "resistance",
-        name: "placeholder",
-        duration: 20,
+        type: "cardio",
+        name: "100 workout",
+        reps: 5,
         distance: 100,
-        stroke: 10,
-        technique: 4
+        stroke: freestyle,
+        pace: fast,
       }
     ]
   },
@@ -94,7 +102,8 @@ const workoutSeed = [
         duration: 20,
         distance: 100,
         stroke: 10,
-        technique: 4
+        technique: 4,
+        pace: medium,
       }
     ]
   },

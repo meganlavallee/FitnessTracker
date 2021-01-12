@@ -13,7 +13,7 @@ const workouts = new Schema({
         type: {
             type: String,
             trim: true,
-            required: "Choose cardio or resistance"
+            required: "Choose cardio or resistance or strenth"
         },
         name: {
             type: String,
