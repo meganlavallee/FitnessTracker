@@ -97,13 +97,12 @@ const workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 4)),
     exercises: [
       {
-        type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4,
-        pace: medium,
+        type: "strength",
+        name: "sprints",
+        distance: 25,
+        stroke: all,
+        technique: speed,
+        pace: fast,
       }
     ]
   },
@@ -112,11 +111,11 @@ const workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        name: "pull set",
+        reps: 6,
+        distance: 50,
+        stroke: freestyle,
+        technique: buyoy,
       }
     ]
   },
@@ -124,12 +123,11 @@ const workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 2)),
     exercises: [
       {
-        type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        type: "cardio",
+        name: "1000 meter everything",
+        distance: 1000,
+        stroke: all,
+        technique: stroke,
       }
     ]
   },
@@ -137,12 +135,11 @@ const workoutSeed = [
     day: new Date(new Date().setDate(new Date().getDate() - 1)),
     exercises: [
       {
-        type: "resistance",
-        name: "placeholder",
-        duration: 20,
-        distance: 100,
-        stroke: 10,
-        technique: 4
+        type: "stength",
+        name: "half mile",
+        distance: 800,
+        stroke: choice,
+        technique: breathing,
       }
     ]
   }
@@ -151,7 +148,7 @@ const workoutSeed = [
 db.Workout.deleteMany({})
   .then(() => db.Workout.collection.insertMany(workoutSeed))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
+    console.log(data.result.n + "workouts");
     process.exit(0);
   })
   .catch(err => {
