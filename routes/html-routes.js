@@ -1,4 +1,4 @@
-const db = require("../models/model");
+const db = require("../models/model.js");
 const path = require("path");
 
 

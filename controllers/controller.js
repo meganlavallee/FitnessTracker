@@ -1,5 +1,5 @@
 // Import model to use database function
-const workout = require("../models/workouts.js");
+const workout = require("../models/model.js");
 
 // Router
 const router = require("mongoose").Router();

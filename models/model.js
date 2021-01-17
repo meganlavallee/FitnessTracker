@@ -43,10 +43,6 @@ const workouts = new Schema({
     }],
 },
     {
-        //code used with virtuals, commented out until 
-        // toObject: {
-        //     virtuals: true
-        // },
         toJSON:
         {
             virtuals: true

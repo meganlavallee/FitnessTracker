@@ -2,15 +2,15 @@ const workoutModel = require("../models/model");
 
 module.exports = function (app) {
 
-    app.get("/api/workouts", (req, res) => {
-        workoutModel.find({})
-            .then(workout => {
-                res.json(workout);
-            })
-            .catch(err => {
-                res.json(err);
-            });
-    })
+    // app.get("/api/workouts", (req, res) => {
+    //     workoutModel.find({})
+    //         .then(workout => {
+    //             res.json(workout);
+    //         })
+    //         .catch(err => {
+    //             res.json(err);
+    //         });
+    // })
 
     app.post("/api/workouts", (req, res) => {
         workoutModel.create({})
@@ -53,4 +53,6 @@ module.exports = function (app) {
             res.status(500).end();
         }
     });
+
+    module.exports = routes;
 }
