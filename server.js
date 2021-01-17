@@ -1,19 +1,28 @@
+const express = require("express");
 const mongoose = require("mongoose");
 const exphbs = require("express-handlebars");
 
-// Server Listening on http://localhost:8080
 
 const PORT = process.env.PORT || 8080;
 
-const app = mongoose();
+const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(mongoose.static("public"));
+app.use(express.static("public"));
 
 // Parse application body
-app.use(mongoose.urlencoded({ extended: true }));
-app.use(mongoose.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+ });
+
+ require('./routes/api-routes.js')(app);
+ require('./routes/html-routes.js')(app);
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
