@@ -1,14 +1,15 @@
 const WorkoutModel = require("../models/model");
+// const router = require("mongoose").Router();
 
 module.exports = function (app) {
 
-     app.get("/api/workouts", (req, res) => {
+     app.get("/api/workouts/", (req, res) => {
          WorkoutModel.find({})
              .then(workout => {
                  res.json(workout);
              })
-             .catch(err => {
-                 res.json(err);
+             .catch(error => {
+                 res.json(error);
              });
      })
 
@@ -17,8 +18,8 @@ module.exports = function (app) {
             .then(workout => {
                 res.json(workout);
             })
-            .catch(err => {
-                res.json(err);
+            .catch(error => {
+                res.json(error);
             });
     })
 
@@ -31,6 +32,7 @@ module.exports = function (app) {
             { new: true, runValidators: true }
         ).then(workout => {
             res.json(workout)
+            console.log(workout)
         });
     })
 
@@ -49,8 +51,9 @@ module.exports = function (app) {
                     .sort({ day: -1 })
                     .limit(7)
             ).reverse());
-        } catch (err) {
+        } catch (error) {
             res.status(500).end();
+            console.log(error)
         }
     });
 
