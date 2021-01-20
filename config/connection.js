@@ -1,5 +1,6 @@
 // Mongoose Connection
 const Mongoose = require("Mongoose");
+const mongoose = require("mongoose");
 
 // Connections
 if (process.env.JAWSDB_URL) {
