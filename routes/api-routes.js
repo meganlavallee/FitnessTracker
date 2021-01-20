@@ -1,9 +1,9 @@
-const workoutModel = require("../models/model");
+const WorkoutModel = require("../models/model");
 
 module.exports = function (app) {
 
      app.get("/api/workouts", (req, res) => {
-         workoutModel.find({})
+         WorkoutModel.find({})
              .then(workout => {
                  res.json(workout);
              })
@@ -13,7 +13,7 @@ module.exports = function (app) {
      })
 
     app.post("/api/workouts", (req, res) => {
-        workoutModel.create({})
+        WorkoutModel.create({})
             .then(workout => {
                 res.json(workout);
             })
@@ -23,7 +23,7 @@ module.exports = function (app) {
     })
 
     app.put("/api/workouts/:id", (req, res) => {
-        workoutModel.findByIdAndUpdate(req.params.id,
+        WorkoutModel.findByIdAndUpdate(req.params.id,
             {
                 $push: { exercises: req.body },
                 $inc: { totalDuration: req.body.duration },
@@ -37,7 +37,7 @@ module.exports = function (app) {
     app.get("/api/workouts/range", async function (req, res) {
         try {
             res.json((
-                await workoutModel.aggregate([
+                await WorkoutModel.aggregate([
                     {
                         $addFields: {
                             totalDuration: {
@@ -54,5 +54,5 @@ module.exports = function (app) {
         }
     });
 
-    module.exports = app;
+    // module.exports = app;
 }

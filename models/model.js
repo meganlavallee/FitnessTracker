@@ -25,17 +25,22 @@ const workouts = new Schema({
             trim: true,
             required: "How long do you want to do this for?"
         },
+        weight: {
+            type: Number,
+            trim: true,
+
+        },
+        reps: {
+            type: Number,
+            trim: true,
+
+        },
+        sets: {
+            type: Number,
+            trim: true,
+
+        },
         distance: {
-            type: Number,
-            trim: true,
-
-        },
-        stroke: {
-            type: Number,
-            trim: true,
-
-        },
-        technique: {
             type: Number,
             trim: true,
 
@@ -56,6 +61,6 @@ workouts.virtual("totalDuration").get(function () {
             sum + exercise.duration, 0);
 });
 
-const workoutModel = mongoose.model("workoutModel", workouts)
+const WorkoutModel = mongoose.model("WorkoutModel", workouts)
 
-module.exports = workoutModel;
+module.exports = WorkoutModel;
